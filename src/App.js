@@ -31,7 +31,7 @@ function App() {
               {/* comeca aqui */}
               <div className=' border-bottom border-dark'>
               <h2>Notícias</h2>
-                <div id='colocar_elemento_na_tela' className='d-flex mw-20 row-cols-1 row-cols-sm-2 row-cols-md-3 g-3'></div>
+                <div id='colocar_elemento_na_tela' className='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3'></div>
               </div>
               {/* onde as noticias aparecem */}
         </div>
@@ -40,7 +40,7 @@ function App() {
             {/* comeca aqui */}
             <div className=' border-bottom border-dark'>
               <h2>Release</h2>
-                <div id='colocar_elemento_na_tela_release' className='d-flex mw-20 row-cols-1 row-cols-sm-2 row-cols-md-3 g-3'></div>
+                <div id='colocar_elemento_na_tela_release' className='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3'></div>
             </div>
             {/* onde as reeleses aparecem */}
         </div>
@@ -90,7 +90,7 @@ function App() {
   }
 // colocar as noticias na tela
 function requesito() {
-  fetch(`http://servicodados.ibge.gov.br/api/v3/noticias/?qtd=6`)
+  fetch(`http://servicodados.ibge.gov.br/api/v3/noticias/?qtd=10`)
   .then(res =>{
       return res.json()
   }).then(res=>{
