@@ -1,7 +1,5 @@
 import './App.css';
 function App() {
-  
-  
 
   return (
   <div className="App">
@@ -12,19 +10,19 @@ function App() {
 
       {/* imagem do menu */}
           <nav className='d-flex justify-content-between'>
-            <a className='me-3 link-dark'>Inicio</a>
-            <a className='me-3 link-dark'>Sobre</a>
-            <a className='me-3 link-dark'>Contato</a>
+            <a className='me-3 link-dark efeito family'>Inicio</a>
+            <a className='me-3 link-dark efeito family'>Sobre</a>
+            <a className='me-3 link-dark efeito family'>Contato</a>
           </nav>
           {/* abas */}
       </menu>
 
       <ul class="nav nav-tabs">
         <li class="nav-item">
-          <a class="nav-link" data-bs-toggle='tab' href="#noticia">Noticia</a>
+          <a class="nav-link efeito family" data-bs-toggle='tab' href="#noticia">Noticia</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-bs-toggle='tab' href="#release">Release</a>
+          <a class="nav-link tirar_efeito family" data-bs-toggle='tab' href="#release">Release</a>
         </li>
       </ul>
 
@@ -58,10 +56,7 @@ function App() {
   );
 }
 
-let numero = 0
-
   function mostrar(res){
-    console.log(res)
     let elemento_not = ''
     let elemento_rele = '' 
 
@@ -77,7 +72,7 @@ let numero = 0
             </div>
           </div>`
         elemento_not += corpo_resposta_not
-     }else{
+      }else{
       let corpo_resposta_rele = `  
       <div>
         <div class='card mb-4 shadow-sm'>
@@ -90,13 +85,10 @@ let numero = 0
       elemento_rele += corpo_resposta_rele
      }
     })
-
     document.getElementById('colocar_elemento_na_tela').innerHTML = elemento_not
     document.getElementById('colocar_elemento_na_tela_release').innerHTML = elemento_rele
   }
-
 // colocar as noticias na tela
-
 function requesito() {
   fetch(`http://servicodados.ibge.gov.br/api/v3/noticias/?qtd=6`)
   .then(res =>{
@@ -105,7 +97,5 @@ function requesito() {
       mostrar(res.items)
   })
 }
-
 // requisitar noticia
-
 export default App;
