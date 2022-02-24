@@ -1,6 +1,6 @@
 import './App.css';
 function App() {
-
+  
   return (
   <div className="App">
 
@@ -17,12 +17,9 @@ function App() {
           {/* abas */}
       </menu>
 
-      <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link efeito family" data-bs-toggle='tab' href="#noticia">Noticia</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link tirar_efeito family" data-bs-toggle='tab' href="#release">Release</a>
+      <ul className="nav nav-tabs">
+        <li className="nav-item">
+          <a className="nav-link efeito family" data-bs-toggle='tab' href="#noticia">Noticia</a>
         </li>
       </ul>
 
@@ -31,24 +28,16 @@ function App() {
               {/* comeca aqui */}
               <div className=' border-bottom border-dark'>
               <h2>Notícias</h2>
-                <div id='colocar_elemento_na_tela' className='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3'></div>
+                <div id='colocar_elemento_na_tela' className='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-1'></div>
               </div>
               {/* onde as noticias aparecem */}
         </div>
-
-        <div id='release' className='tab-pane'>
-            {/* comeca aqui */}
-            <div className=' border-bottom border-dark'>
-              <h2>Release</h2>
-                <div id='colocar_elemento_na_tela_release' className='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3'></div>
-            </div>
-            {/* onde as reeleses aparecem */}
-        </div>
-
       </div>      
 
       <button id='mais' className='btn btn-info me-3 m-4' onClick={requesito}>
-      <a class="nav-link" data-bs-toggle='tab' href="#noticia">Carregar</a>
+
+
+      <a className="nav-link" data-bs-toggle='tab' href="#noticia">Carregar</a>
       </button>
     
   </div>
@@ -56,46 +45,37 @@ function App() {
   );
 }
 
-  function mostrar(res){
-    let elemento_not = ''
-    let elemento_rele = '' 
 
-    res.forEach(element => {
-      if(element.tipo === "Notícia"){
-        let corpo_resposta_not = `  
-          <div>
-            <div class='card mb-4 shadow-sm'>
-                <div class='card-body tamanho-do-card'>
-                  <h2 class='card-text border-bottom border-dark titulo_materia'>${element.titulo}</h2>
-                  <p class='card-text texto'>${element.introducao}</p>
-                </div>
-            </div>
-          </div>`
-        elemento_not += corpo_resposta_not
-      }else{
-      let corpo_resposta_rele = `  
-      <div>
-        <div class='card mb-4 shadow-sm'>
-            <div class='card-body tamanho-do-card'>
-              <h2 class='card-text border-bottom border-dark titulo_materia'>${element.titulo}</h2>
-              <p class='card-text texto'>${element.introducao}</p>
-            </div>
-        </div>
-      </div>`
-      elemento_rele += corpo_resposta_rele
-     }
-    })
-    document.getElementById('colocar_elemento_na_tela').innerHTML = elemento_not
-    document.getElementById('colocar_elemento_na_tela_release').innerHTML = elemento_rele
-  }
-// colocar as noticias na tela
-function requesito() {
-  fetch(`http://servicodados.ibge.gov.br/api/v3/noticias/?qtd=10`)
-  .then(res =>{
-      return res.json()
-  }).then(res=>{
-      mostrar(res.items)
+function mostrar(res){
+  let elemento_not = ''
+
+  res.forEach(element => {
+      let corpo_resposta_not = `  
+        <div>
+          <div class='card mb-4 shadow-sm'>
+              <div class='card-body tamanho-do-card'>
+                <h2 class='card-text border-bottom border-dark titulo_materia'>${element.title}</h2>
+                <p class='card-text texto'>${element.content}</p>
+              </div>
+          </div>
+        </div>`
+
+      elemento_not += corpo_resposta_not   
   })
+  document.getElementById('colocar_elemento_na_tela').innerHTML = elemento_not
+}
+
+// colocar as noticias na tela
+
+function requesito() {
+fetch(`https://newsapi.org/v2/top-headlines?sources=google-news-br&apiKey=2b456572eef44b8692eb90b94a661628`)
+.then(res =>{
+    return res.json()
+}).then(res=>{
+  mostrar(res.articles)
+})
 }
 // requisitar noticia
+
+
 export default App;
