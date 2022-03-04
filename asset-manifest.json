@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "./static/css/main.8ff22099.css",
-    "main.js": "./static/js/main.cbc21acb.js",
-    "static/js/787.29097b08.chunk.js": "./static/js/787.29097b08.chunk.js",
-    "static/media/noticia.png": "./static/media/noticia.57ce369c93e44dc3ff7d.png",
-    "index.html": "./index.html",
-    "main.8ff22099.css.map": "./static/css/main.8ff22099.css.map",
-    "main.cbc21acb.js.map": "./static/js/main.cbc21acb.js.map",
-    "787.29097b08.chunk.js.map": "./static/js/787.29097b08.chunk.js.map"
+    "main.css": "/ItaloMirandaSantiago/site_de_noticia.git/static/css/main.8a84e1b2.css",
+    "main.js": "/ItaloMirandaSantiago/site_de_noticia.git/static/js/main.d0d60244.js",
+    "static/js/787.29097b08.chunk.js": "/ItaloMirandaSantiago/site_de_noticia.git/static/js/787.29097b08.chunk.js",
+    "static/media/noticia.png": "/ItaloMirandaSantiago/site_de_noticia.git/static/media/noticia.57ce369c93e44dc3ff7d.png",
+    "index.html": "/ItaloMirandaSantiago/site_de_noticia.git/index.html",
+    "main.8a84e1b2.css.map": "/ItaloMirandaSantiago/site_de_noticia.git/static/css/main.8a84e1b2.css.map",
+    "main.d0d60244.js.map": "/ItaloMirandaSantiago/site_de_noticia.git/static/js/main.d0d60244.js.map",
+    "787.29097b08.chunk.js.map": "/ItaloMirandaSantiago/site_de_noticia.git/static/js/787.29097b08.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ff22099.css",
-    "static/js/main.cbc21acb.js"
+    "static/css/main.8a84e1b2.css",
+    "static/js/main.d0d60244.js"
   ]
 }
