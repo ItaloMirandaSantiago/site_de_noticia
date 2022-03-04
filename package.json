@@ -1,5 +1,4 @@
 {
-  "homepage": ".",
   "name": "site_noticia",
   "version": "0.1.0",
   "private": true,
@@ -14,7 +13,8 @@
   },
   "devDependencies": {
     "gh-pages": "^3.2.3"
-  },
+  }, 
+  "homepage": "https://github.com/ItaloMirandaSantiago/site_de_noticia.git",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
