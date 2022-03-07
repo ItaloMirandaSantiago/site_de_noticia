@@ -12,3 +12,5 @@
 //         props.enviar(res.articles)
 //     })
 // }
+
+// https://newsapi.in/newsapi/news.php?key=pBtwz5l2XrRCOfc79XrnmlwvKOw7ge&category='category_name
