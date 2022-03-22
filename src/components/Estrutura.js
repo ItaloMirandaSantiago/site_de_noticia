@@ -1,13 +1,13 @@
 import React from "react"
 import Estado from "./Estado"
+import Imagem_menu from './Imagem_menu'
 
 export default function estrutura() {
     return(  
     <div className="App">
 
     <menu className='d-flex justify-content-evenly align-items-center'>
-
-      <img href='../imgs/noticia.png' />
+      <Imagem_menu />
 
     {/* imagem do menu */}
         <nav className='d-flex justify-content-between'>
@@ -20,8 +20,16 @@ export default function estrutura() {
 
     <ul className="nav nav-tabs">
       <li className="nav-item">
-        <a className="nav-link efeito family" data-bs-toggle='tab' href="#noticia">Noticia</a>
-      </li>
+        <a className="nav-link efeito family" aria-current="page" data-bs-toggle='tab' href="#noticia">Noticia</a>
+      </li> {/* Noticias */}
+
+      <li className="nav-item">
+        <a className="nav-link efeito family" data-bs-toggle='tab' href="#reelese">reelese</a>
+      </li> {/* Releese */}
+
+      <li className="nav-item">
+        <a className="nav-link efeito family" data-bs-toggle='tab' href="#favoritos">favoritos</a>
+      </li> {/* favoritos/salvos */}
     </ul>
 
     <div className='tab-content'>
@@ -35,6 +43,7 @@ export default function estrutura() {
               </div>
             </div>
       </div>
-    </div>      
+      <div id="reelese" className="tab-pane"></div>
+    </div>
 </div>)
 }
