@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 export default function Estado() {
   const [noticias, set_noticias] = useState([])
 
-try{  useEffect(()=>{
+  try{  useEffect(()=>{
       fetch(`http://servicodados.ibge.gov.br/api/v3/noticias/?qtd=10&tipo=noticia`)
       // http://servicodados.ibge.gov.br/api/v3/noticias/?qtd=10&tipo=noticia
         .then(res =>{
