@@ -1,5 +1,7 @@
-// import React from 'react'
+// import React, { useEffect } from 'react'
 // import Estado from '../components/Estado'
+
+
 
 // export default function Requisito(props) { 
 //     const [estado, set_estado] = useState([])

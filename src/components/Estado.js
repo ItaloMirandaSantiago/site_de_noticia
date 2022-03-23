@@ -26,6 +26,7 @@ export default function Estado() {
   function enviar(res){
     console.log(res)
       let array = []
+
       res.forEach((element, index) => {
         let juntar = <div key={index}>
           <div className='card mb-4 shadow-sm'>
@@ -35,7 +36,8 @@ export default function Estado() {
               </div>
           </div>
         </div>
-          array.push(juntar)
+
+        array.push(juntar)
     })
     set_noticias(array)
   }

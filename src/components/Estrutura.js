@@ -1,5 +1,6 @@
 import React from "react"
 import Estado from "./Estado"
+import Estado_Reelese from "./Estado_Reelese"
 import Imagem_menu from './Imagem_menu'
 
 export default function estrutura() {
@@ -39,11 +40,21 @@ export default function estrutura() {
               <h2>Notícias</h2>
               <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-1'>
                 {/* onde as noticias aparecem */}
-                  <Estado></Estado>
+                  <Estado/>
               </div>
             </div>
       </div>
-      <div id="reelese" className="tab-pane"></div>
+      <div id="reelese" className="tab-pane">
+          <div className=' border-bottom border-dark'>
+            <h2>Releese</h2>
+          </div>
+          <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-1'>
+                  {/* onde as noticias aparecem */}
+                    <Estado_Reelese/>
+          </div>
+      </div>
     </div>
 </div>)
+
+
 }
