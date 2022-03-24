@@ -36,6 +36,18 @@ body{
   height: 50px;
 } */
 
+.img_container{
+  float: right;
+}
+
+button{
+  background-color: white;
+  text-decoration: none;
+  display: inline;
+  border: none;
+  float: right;
+}
+
 #titulo, #texto{
   color: black;
 }

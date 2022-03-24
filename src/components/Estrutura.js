@@ -2,6 +2,7 @@ import React from "react"
 import Estado from "./Estado"
 import Estado_Reelese from "./Estado_Reelese"
 import Imagem_menu from './Imagem_menu'
+import Favoritos from "./Favoritos"
 
 export default function estrutura() {
     return(  
@@ -25,7 +26,7 @@ export default function estrutura() {
       </li> {/* Noticias */}
 
       <li className="nav-item">
-        <a className="nav-link efeito family" data-bs-toggle='tab' href="#reelese">reelese</a>
+        <a className="nav-link efeito family" data-bs-toggle='tab' href="#Release">Release</a>
       </li> {/* Releese */}
 
       <li className="nav-item">
@@ -44,16 +45,28 @@ export default function estrutura() {
               </div>
             </div>
       </div>
-      <div id="reelese" className="tab-pane">
+      <div id="Release" className="tab-pane">
           <div className=' border-bottom border-dark'>
-            <h2>Releese</h2>
+            <h2>Release</h2>
           </div>
           <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-1'>
                   {/* onde as noticias aparecem */}
                     <Estado_Reelese/>
           </div>
       </div>
+
+      <div id="favoritos" className="tab-pane">
+          <div className=' border-bottom border-dark'>
+            <h2>favoritos</h2>
+          </div>
+          <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-1'>
+              {/* onde os favoritos aparecem */}
+              <Favoritos />
+          </div>
+      </div>
+
     </div>
+
 </div>)
 
 
