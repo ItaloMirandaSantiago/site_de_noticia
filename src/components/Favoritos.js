@@ -5,11 +5,8 @@ export default function Favoritos(){
     
     useEffect(()=>{
         if (favoritos.length === 0) {
-            console.log('foi')
         }
     }, [])
-
-
 
 return (<div>
     <h2>não terminado</h2>

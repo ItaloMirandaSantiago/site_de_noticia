@@ -81,52 +81,6 @@ import React, { useEffect } from 'react'
             {id: 19, tipo: 'Release', 
             titulo: 'Produção industrial recua -2,4% em janeiro', 
             introducao: 'Em janeiro de 2022, a produção industrial nacional mostrou redução de 2,4% frente ao mês de dezembro de 2021 (série com ajuste sazonal), eliminando, dessa forma, parte da expansão de 2,9% registrada no mês anterior. Já em relação a janeiro de 2021, houve...'
-        }
-
-        
-        
-        ]
+        }]
 
             export default items_reservas
-
-
-            // {id:0, tipo: 'Noticia', 
-            // titulo:"Parceria IBGE-CFC facilita contadores e empresas informantes das Pesquisas Econômicas Anuais",
-            // introducao: 'IBGE e o CFC pretendem disseminar junto à sociedade os benefícios do Projeto Preenche Rápido. - Foto: Arte sobre foto Unsplash O IBGE e o Conselho Federal de Contabilidade (CFC) assinaram um Acordo de Cooperação Técnica no contexto do Projeto Preenche...',  
-            // },
-            // {id:1, tipo: 'Noticia', 
-            // titulo:"Desemprego cai para 11,2% no trimestre encerrado em janeiro, menor taxa para o período desde 2016",
-            // introducao: 'Desempenho do comércio influenciou na queda do desemprego em janeiro - Foto: Tomaz Silva/Agência Brasil A taxa de desocupação caiu para 11,2% no trimestre encerrado em janeiro, recuo de 0,9 ponto percentual na comparação com o trimestre anterior,...',  
-            // },
-            // {id: 2, tipo:'Noticia',
-            // titulo:"Proteção e confidencialidade dos dados são compromisso permanente do IBGE",
-            // introducao: 'LGPD não exime o cidadão de prestar informações estatísticas e não prevê nenhuma proteção que o IBGE já não pratique - Foto: Licia Rubinstein/Agência IBGE Notícias A Lei Geral de Proteção de Dados Pessoais (LGPD) não desobriga cidadãos e empresas...',  
-            // },
-            // {id:3, tipo: 'Noticia', 
-            // titulo:"Após dois meses em alta, setor de serviços varia -0,1% em janeiro",
-            // introducao: 'Setor de serviços decresce em janeiro puxado pelo segmento de tecnologia da informação - Foto: Licia Rubinstein/Agência IBGE O setor de serviços variou -0,1% na passagem de dezembro para janeiro, após acumular um ganho de 4,7% nos dois últimos meses do...',  
-            // },
-            // {id:4, tipo: 'Noticia', 
-            // titulo:"Em ano de Censo, Agência IBGE Notícias ganha novo visual para melhorar experiência do usuário",
-            // introducao: 'No ano passado, a Agência IBGE recebeu mais de 7,5 milhões de visitas, um recorde desde sua criação em 2017 - Arte: Helena Pontes sobre maquete Freepick Prestes a completar cinco anos de produção jornalística especializada em estatísticas e geociências,...',  
-            // },
-            // {id:5, tipo: 'Noticia', 
-            // titulo:"Inflação é de 1,01% em fevereiro, maior para o mês desde 2015",
-            // introducao: 'IPCA de fevereiro incorpora os reajustes habitualmente praticados no início do letivo - Foto: Lucas Fermin/SEED/AEN-PR A inflação registrou alta de 1,01% em fevereiro de 2022, sendo essa a maior variação para um mês de fevereiro desde 2015 (1,22%). O...',  
-            // },
-            // {id:6, tipo: 'Noticia', 
-            // titulo:"Abate de frangos e suínos bate recorde e o de bovinos volta a cair em 2021",
-            // introducao: 'Com recorde na exportação e alto consumo interno, abate de frangos foi o maior da série histórica - Foto: Governo do Estado de São Paulo O Brasil registrou o abate de 6,18 bilhões de cabeças de frango em 2021, o que representa um aumento de 2,8% - ou...',  
-            // },
-            // {id:7, tipo: 'Noticia', 
-            // titulo:"Produção industrial cai em 10 de 15 locais em janeiro",
-            // introducao: 'Em janeiro, o excesso de chuvas atrapalhou a extração mineral, principal atividade industrial do estado de Minas - Foto: Janaina Duarte/Agência Vale A queda de 2,4% da produção industrial nacional na passagem de dezembro de 2021 para janeiro de 2022, na...',  
-            // },
-            // {id:8, tipo: 'Noticia', 
-            // titulo:"IBGE e INSS fazem acordo para funcionamento de postos de coleta do Censo",
-            // introducao: 'Cessão de salas e equipamentos estão entre itens do Acordo de Cooperação Técnica - Foto: Divulgação/INSS As agências do INSS (Instituto Nacional do Seguro Social) serão parte das ações para a realização do Censo Demográfico 2022. O Acordo de Cooperação...',  
-            // },
-            // {id:9, tipo: 'Noticia', 
-            // titulo:"Resultados do teste nacional mostram que IBGE está preparado para o início do Censo em agosto",
-            // introducao: 'Cerca de 250 recenseadores visitaram as localidades entre novembro e fevereiro - Foto: Acervo IBGE O IBGE divulga hoje (17) os resultados do Teste Nacional do Censo Demográfico, realizado de novembro de 2021 a fevereiro de 2022, em 27 localidades dos 26...',  
-            // },

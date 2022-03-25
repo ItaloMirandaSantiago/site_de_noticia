@@ -4,7 +4,8 @@ import Estado_Reelese from "./Estado_Reelese"
 import Imagem_menu from './Imagem_menu'
 import Favoritos from "./Favoritos"
 
-export default function estrutura() {
+export default function Estrutura(props) {
+
     return(  
     <div className="App">
 
@@ -41,7 +42,7 @@ export default function estrutura() {
               <h2>Notícias</h2>
               <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-1'>
                 {/* onde as noticias aparecem */}
-                  <Estado/>
+                  <Estado salvar_favoritos={props.salvar_favoritos}/>
               </div>
             </div>
       </div>
@@ -51,7 +52,7 @@ export default function estrutura() {
           </div>
           <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-1'>
                   {/* onde as noticias aparecem */}
-                    <Estado_Reelese/>
+                    <Estado_Reelese salvar_favoritos={props.salvar_favoritos}/>
           </div>
       </div>
 
