@@ -4,7 +4,8 @@ export default function Favoritos(){
     const [favoritos, set_favoritos] = useState([])
     
     useEffect(()=>{
-        if (favoritos.length === 0) {
+        if (favoritos) {
+            
         }
     }, [])
 

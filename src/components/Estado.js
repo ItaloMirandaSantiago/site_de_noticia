@@ -9,7 +9,7 @@ export default function Estado(props) {
     useEffect(()=>{
       fetch(`http://servicodados.ibge.gov.br/api/v3/noticias/?qtd=10&tipo=noticia`)
         .then(res => res.json())
-        .then(res => enviar(res.items))
+        .then(res => enviar(res.items) )
         
         .catch(error => {
           let array_noticia = []
