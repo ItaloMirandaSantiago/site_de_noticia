@@ -3,19 +3,18 @@ import './App.css';
 import Estrutura from './components/Estrutura';
 
 function App() {
+  const [items, setItems] = useState([])
 
-  function salvar_favoritos(event) {
-    let saveItem = event.target.parentNode.parentNode.parentNode
-
-    localStorage.setItem('element', JSON.stringify(saveItem))
-
-    return console.log(event.target.parentNode.parentNode.parentNode)
-    // return console.log(JSON.parse(localStorage.getItem('element'))) 
-  }
-
+function salvar_favoritos(event) {
+  
+  setItems([...items, event])
+  console.log(items)
+}
+// event.target.parentNode.parentNode.parentNode
+// .parentNode.parentNode.parentNode
   return (
       <div>
-        <Estrutura salvar_favoritos={salvar_favoritos}></Estrutura>
+        <Estrutura salvar_favoritos={salvar_favoritos} items={items} />
         {/* todos os componentes da api são tratados em Estados e enviados 
         diretamente para a estrutura, onde são mostrados na tela*/}
       </div>

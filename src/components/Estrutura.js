@@ -47,11 +47,11 @@ export default function Estrutura(props) {
             </div>
       </div>
       <div id="Release" className="tab-pane">
-          <div className=' border-bottom border-dark'>
+          <div className=' border-dark'>
             <h2>Release</h2>
           </div>
           <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-1'>
-                  {/* onde as noticias aparecem */}
+                  {/* onde as Reelese aparecem */}
                     <Estado_Reelese salvar_favoritos={props.salvar_favoritos}/>
           </div>
       </div>
@@ -62,7 +62,7 @@ export default function Estrutura(props) {
           </div>
           <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-1'>
               {/* onde os favoritos aparecem */}
-              <Favoritos />
+              <Favoritos items={props.items}/>
           </div>
       </div>
 
