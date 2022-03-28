@@ -3,6 +3,7 @@ import Estado from "./Estado"
 import Estado_Reelese from "./Estado_Reelese"
 import Imagem_menu from './Imagem_menu'
 import Favoritos from "./Favoritos"
+import Futebol from './Futebol'
 
 export default function Estrutura(props) {
 
@@ -31,6 +32,10 @@ export default function Estrutura(props) {
       </li> {/* Releese */}
 
       <li className="nav-item">
+        <a className="nav-link efeito family" data-bs-toggle='tab' href="#Futebol">Futebol</a>
+      </li> {/* Releese */}
+
+      <li className="nav-item">
         <a className="nav-link efeito family" data-bs-toggle='tab' href="#favoritos">favoritos</a>
       </li> {/* favoritos/salvos */}
     </ul>
@@ -55,14 +60,24 @@ export default function Estrutura(props) {
                     <Estado_Reelese salvar_favoritos={props.salvar_favoritos}/>
           </div>
       </div>
+      <div id="Futebol" className="tab-pane">
+          <div className=' border-dark'>
+            <h2>Futebol</h2>
+          </div>
+          <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-1'>
+                  {/* onde Futebol aparecem */}
+                  <Futebol />
+                    
+          </div>
+      </div>
 
       <div id="favoritos" className="tab-pane">
           <div className=' border-bottom border-dark'>
             <h2>favoritos</h2>
           </div>
-          <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-1'>
-              {/* onde os favoritos aparecem */}
-              <Favoritos items={props.items}/>
+          <div> 
+            {/* onde os favoritos aparecem */}
+            <Favoritos items={props.items}/>
           </div>
       </div>
 
