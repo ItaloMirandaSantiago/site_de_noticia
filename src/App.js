@@ -7,9 +7,21 @@ function App() {
   let elemento = []
 
 function salvar_favoritos(event) {
-  let save = JSON.parse(localStorage.getItem('recuperar'))
+  let verificar = true
+
   elemento = [...elemento, event]
-  setItems([...elemento])
+// adiconar elemento para fazer a verificação
+
+
+  for (let i = 0; i <= elemento.length -2; i++) {
+    if (elemento[elemento.length -1].id === elemento[i].id) {
+    alert('Este item já foi adcionado aos favoritos')
+    verificar = false
+    elemento.pop()
+    }
+  }
+    setItems([...elemento])
+  // adiconar aos favoritos toda vez que apertar na estrela
 }
 
 useEffect(()=>{
@@ -17,17 +29,15 @@ useEffect(()=>{
   if (save) {
     setItems(save)
     elemento = [...save]
+    // pegar items salvos em favoritos caso tenha algo
   }
 }, [])
 
 useEffect(()=>{
-  localStorage.setItem('recuperar',JSON.stringify(items))
+    localStorage.setItem('recuperar',JSON.stringify(items))
   // salvar items do favoritos na memoria
 }, [items])
 
-
-// event.target.parentNode.parentNode.parentNode
-// .parentNode.parentNode.parentNode
   return (
       <div>
         <Estrutura salvar_favoritos={salvar_favoritos} items={items} />

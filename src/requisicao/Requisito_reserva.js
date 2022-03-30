@@ -81,6 +81,62 @@ import React, { useEffect } from 'react'
             {id: 19, tipo: 'Release', 
             titulo: 'Produção industrial recua -2,4% em janeiro', 
             introducao: 'Em janeiro de 2022, a produção industrial nacional mostrou redução de 2,4% frente ao mês de dezembro de 2021 (série com ajuste sazonal), eliminando, dessa forma, parte da expansão de 2,9% registrada no mês anterior. Já em relação a janeiro de 2021, houve...'
-        }]
+            }
+            ,
+            {id: 20, tipo: 'futebol', 
+            titulo: 'Botafogo inicia mudanças no futebol profissional e corta jogadores, Flavio Tenius e Lucio Flavio', 
+            introducao: 'Atletas pouco aproveitados e com idade abaixo do sub-23 abrirão espaço no elenco principal, que terá limite de 30 nomes. Antiga comissão técnica dará lugar à equipe de Luís Castro'
+            }
+            ,
+            {id: 21, tipo: 'futebol', 
+            titulo: 'Edimar analisa concorrência com Riquelme pela lateral-esquerda do Vasco: "Posição está bem sustentada"', 
+            introducao: 'Jogador também projetou a estreia do Vasco na Série B, contra o Vila Nova, no dia oito de abril: "equipe difícil, que briga muito para ter a bola"'
+            }
+            ,
+            {id: 22, tipo: 'futebol', 
+            titulo: '"Caminhão descendo a ladeira sem freio e sem óleo", diz técnico após queda do Sete de Setembro', 
+            introducao: ' Roberto Neves foi o terceiro técnico do Lobo-guará na campanha do rebaixamento no Campeonato Pernambucano. "Sou o treinador e assumo a responsabilidade", lamentou'
+            }
+            ,
+            {id: 23, tipo: 'futebol', 
+            titulo: 'Dirigente do Dortmund "joga a toalha" por Haaland: "Se o City fizer uma proposta"', 
+            introducao: 'Hans-Joachim Watzke, CEO do clube alemão, admite que será difícil conseguir manter o atacante norueguês na Bundesliga caso o time de Pep Guardiola entre firme na negociação'
+            }
+            ,
+            {id: 24, tipo: 'futebol', 
+            titulo: 'Corinthians se reapresenta de olho na Libertadores, e Willian faz trabalho de fortalecimento', 
+            introducao: 'Meia-atacante tem reclamado de dores no quadril desde as quartas de final do Paulistão'
+            }
+            ,
+            {id: 25, tipo: 'futebol', 
+            titulo: 'Fora da Copa, Ibrahimovic descarta aposentadoria; veja outros craques que não vão ao Catar', 
+            introducao: 'Mesmo eliminado, atacante revela o desejo de representar a Suécia mais vezes'
+            }
+            ,
+            {id: 26, tipo: 'futebol', 
+            titulo: 'Final do Mineiro: Atlético-MG e Cruzeiro se reúnem na FMF para definir detalhes do clássico', 
+            introducao: 'Rivais decidem a taça de campeão do Mineiro 2022 no sábado, com o Mineirão dividido igualmente; bola rola a partir de 16h30, e qualquer empate leva o título para decisão nos pênaltis'
+            }
+            ,
+            {id: 27, tipo: 'futebol', 
+            titulo: 'Cruzeiro ingressa com efeito suspensivo e aguarda TJD para ter Pezzolano na final do Mineiro', 
+            introducao: 'Pedido já foi entregue ao relator do processo, no TJD; treinador foi punido por chamar árbitro de "ladrão" no clássico contra o Atlético-MG'
+            }
+            ,
+            {id: 28, tipo: 'futebol', 
+            titulo: 'Artilheiro do Campeonato Paraense, Paulo Rangel tem futuro na Tuna indefinido', 
+            introducao: 'Atacante tem oito gols no Parazão e vem chamando atenção de equipes da Série C e D do Brasileiro',
+            },
+            {id: 29, tipo: 'futebol', 
+            titulo: 'Fabricante promete "bola mais rápida das Copas" e garante: "Jogadores acharam incrível"', 
+            introducao: 'Segundo a Adidas, Al Rihla pode ter maior velocidade no voo do que antecessoras, além de uma precisão maior nos chutes'
+            }
+            ,
+            {id: 30, tipo: 'futebol', 
+            titulo: 'Palmeiras supera 60 mil sócios-torcedores e recupera marca de antes da pandemia', 
+            introducao: 'Verdão não registrava número desde setembro de 2019; crescimento na atual gestão é de 44%'
+            }
+
+    ]
 
             export default items_reservas

@@ -7,18 +7,17 @@ export default function Futebol(props) {
     const [Fut, set_Fut] = useState([])
 
     useEffect(()=>{
-      fetch(`http://api.football-data.org/v1/soccerseasons`)
+      fetch(`https://api.api-futebol.com.br/v1/campeonatos/10`)
         .then(res => res.json())
-        .then(res => console.log(res) )
+        .then(res => enviar(res))
         
         .catch(error => {
           let array_noticia = []
             for (let i = 0; i < Requisito_reserva.length; i++) {
-              if (Requisito_reserva[i].tipo === "Noticia"){
+              if (Requisito_reserva[i].tipo === "futebol"){
                 array_noticia.push(Requisito_reserva[i])
               }
             }
-            console.log(array_noticia)
             enviar(array_noticia)
           })
       }, [])

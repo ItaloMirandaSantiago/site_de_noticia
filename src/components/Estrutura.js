@@ -66,7 +66,7 @@ export default function Estrutura(props) {
           </div>
           <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-1'>
                   {/* onde Futebol aparecem */}
-                  <Futebol />
+                  <Futebol salvar_favoritos={props.salvar_favoritos}/>
                     
           </div>
       </div>
