@@ -19,6 +19,7 @@ export default function Futebol(props) {
               }
             }
             enviar(array_noticia)
+            console.log('pegando dados locais' + error)
           })
       }, [])
 

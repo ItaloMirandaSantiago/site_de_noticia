@@ -72,8 +72,9 @@ export default function Estrutura(props) {
       </div>
 
       <div id="favoritos" className="tab-pane">
-          <div className=' border-bottom border-dark'>
-            <h2>favoritos</h2>
+          <div className=' border-bottom border-dark mt-2'>
+            <h2 className="d-inline">favoritos</h2>
+            <button className="btn btn-danger mb-1" onClick={()=>{props.resetar()}}>Apagar tudo</button>
           </div>
           <div> 
             {/* onde os favoritos aparecem */}

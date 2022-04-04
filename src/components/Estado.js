@@ -18,7 +18,7 @@ export default function Estado(props) {
                 array_noticia.push(Requisito_reserva[i])
               }
             }
-            console.log(array_noticia)
+            console.log('pegando dados locais' + error)
             enviar(array_noticia)
           })
       }, [])
