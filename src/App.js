@@ -35,6 +35,9 @@ useEffect(()=>{
 
 function resetar(){
   setItems([])
+  console.log(items)
+  console.log(JSON.parse(localStorage.getItem('recuperar')))
+  localStorage.removeItem('recuperar')
 }
 
 useEffect(()=>{
