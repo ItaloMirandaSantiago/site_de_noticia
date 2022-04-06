@@ -6,11 +6,7 @@ export default function Favoritos(props){
     titulo:'Nada salvo atualmente'}]
     let verdadeiro = false
 
-
-
-
-    useEffect(()=>{
-
+    function verificar() {
         if (props.items.length === 0) {
             
             verdadeiro = true
@@ -18,16 +14,15 @@ export default function Favoritos(props){
         }else{
             
             verdadeiro = false
-            console.log('foi')
-
         }
+    }
 
-    },[props.items] )
+    verificar()
 
 return (
 
     <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-1">
-        {
+        {   
                 verdadeiro ?
                
                     item_aviso.map((item, index)=>{

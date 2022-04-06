@@ -4,19 +4,20 @@ import Estrutura from './components/Estrutura';
 
 function App() {
   const [items, setItems] = useState([])
-  let elemento = []
+  var elemento = []
+
+function resetar(){
+  setItems([])
+  elemento = []
+  // resetar toda vez que aperta no button dos favoritos
+}
 
 function salvar_favoritos(event) {
-  let verificar = true
-
   elemento = [...elemento, event]
 // adiconar elemento para fazer a verificação
-
-
   for (let i = 0; i <= elemento.length -2; i++) {
     if (elemento[elemento.length -1].id === elemento[i].id) {
     alert('Este item já foi adicionado aos favoritos')
-    verificar = false
     elemento.pop()
     }
   }
@@ -29,20 +30,13 @@ useEffect(()=>{
   if (save) {
     setItems(save)
     elemento = [...save]
-    // pegar items salvos em favoritos caso tenha algo
+    // pegar items salvos em favoritos, caso tenha algo
   }
 }, [])
 
-function resetar(){
-  setItems([])
-  console.log(items)
-  console.log(JSON.parse(localStorage.getItem('recuperar')))
-  localStorage.removeItem('recuperar')
-}
-
 useEffect(()=>{
     localStorage.setItem('recuperar',JSON.stringify(items))
-  // salvar items do favoritos na memoria
+  // salvar items do favoritos na memória
 }, [items])
 
   return (
