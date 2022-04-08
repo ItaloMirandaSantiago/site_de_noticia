@@ -22,6 +22,7 @@ body{
 
 .efeito{
   text-decoration: none;
+  cursor: pointer;
 }
 
 .efeito:hover{

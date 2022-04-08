@@ -9,40 +9,37 @@ export default function Futebol(props) {
     useEffect(()=>{
       fetch(`https://api.api-futebol.com.br/v1/campeonatos/10`)
         .then(res => res.json())
-        .then(res => enviar(res))
-        
-        .catch(error => {
-          let array_noticia = []
-            for (let i = 0; i < Requisito_reserva.length; i++) {
-              if (Requisito_reserva[i].tipo === "futebol"){
-                array_noticia.push(Requisito_reserva[i])
-              }
-            }
-            enviar(array_noticia)
-            console.log('pegando dados locais' + error)
-          })
+        .then(res => {
+          if (res.length) {
+            set_Fut(res)
+          } else {
+            set_Fut(Requisito_reserva)
+          } })
       }, [])
-
-  function enviar(res){
-      let array = []
-
-      res.forEach((element, index) => {
-        let juntar = <div key={index}>
-          <div className='card mb-4 shadow-sm'>
-              <div className='card-body tamanho-do-card'>
-                <button onClick={()=>{props.salvar_favoritos(element)}}>  <img src={img_estrela_acesa} width='30px' height='30px' className="img_container"/></button>
-                {/* props.salvar_favoritos */}
-                <h2 className='card-text border-bottom border-dark titulo_materia'>{element.titulo}</h2>
-                <p className='card-text texto'>{element.introducao}</p>
-              </div>
+    
+    return (
+      <>
+      {Fut.map((element, index)=>(
+        <div key={index}>
+          <div className="card mb-4 shadow-sm">
+            <div className="card-body tamanho-do-card">
+              <button onClick={()=>{props.salvar_favoritos(element)}}>  
+              {" "}
+                  <img src={img_estrela_acesa} width='30px' height='30px' 
+                  className="img_container" alt="salvar"/>
+              </button>
+              <h2 className="card-text border-bottom border-dark titulo_materia">{element.titulo}</h2>
+              <p className="card-text texto">
+                {element.introducao}
+              </p>
+            </div>
           </div>
         </div>
-
-        array.push(juntar)
-    })
-    set_Fut(array)
-  }
-    return Fut
+      ))}
+      
+      
+      </>
+    )
 }
 
 // http://api.football-data.org/v1/soccerseasons
