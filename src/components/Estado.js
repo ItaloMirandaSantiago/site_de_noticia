@@ -10,6 +10,7 @@ export default function Estado(props) {
         .then(res => res.json())
         .then(res => {
             if (res.length) {
+              console.log(res.length)
               set_noticias(res)
             } else {
               set_noticias(Requisito_reserva)
