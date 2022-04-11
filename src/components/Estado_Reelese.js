@@ -6,15 +6,15 @@ export default function Estado_Reelese(props){
     const [reelese, set_reelese] = useState([])
 
     useEffect(()=>{
-        fetch(`http://servicodados.ibge.gov.br/api/v3/noticias/?qtd=10&tipo=release`)
+        fetch(`https://api.api-futebol.com.br/v1/campeonatos/10`)
         .then(res => res.json())
         .then(res => {
             if (res.length) {
                 set_reelese(res)
-            } else {
-                set_reelese(Requisito_reserva)    
-            }
-        }) 
+            }else{
+                set_reelese(Requisito_reserva[1])
+            }  
+        })   
     }, [])
 
     return(
@@ -35,7 +35,7 @@ export default function Estado_Reelese(props){
                     </p>
                   </div>
                 </div>
-              </div>
+            </div>
             ))
         }
     </>

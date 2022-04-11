@@ -6,16 +6,15 @@ export default function Estado(props) {
   const [noticias, set_noticias] = useState([])
 
     useEffect(()=>{
-      fetch(`http://servicodados.ibge.gov.br/api/v3/noticias/?qtd=10&tipo=noticia`)
+      fetch(`https://api.api-futebol.com.br/v1/campeonatos/10`)
         .then(res => res.json())
         .then(res => {
-            if (res.length) {
-              console.log(res.length)
-              set_noticias(res)
-            } else {
-              set_noticias(Requisito_reserva)
-            } })          
+          if (res.length) {
+            set_noticias(res)
+          }else(set_noticias(Requisito_reserva[0]))
+        })  
       }, [])
+
     return(
       noticias.map((element, index) => (
         <div key={index}>

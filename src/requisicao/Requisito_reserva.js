@@ -3,7 +3,8 @@ import React, { useEffect } from 'react'
 
 // caso a api falhe, estes dados vão substituí-la
 
-        let items_reservas = [ 
+        let items_reservas = [
+        [
             {id:0, tipo: 'Noticia', 
             titulo:"Parceria IBGE-CFC facilita contadores e empresas informantes das Pesquisas Econômicas Anuais",
             introducao: 'IBGE e o CFC pretendem disseminar junto à sociedade os benefícios do Projeto Preenche Rápido. - Foto: Arte sobre foto Unsplash O IBGE e o Conselho Federal de Contabilidade (CFC) assinaram um Acordo de Cooperação Técnica no contexto do Projeto Preenche...',  
@@ -43,7 +44,9 @@ import React, { useEffect } from 'react'
             {id:9, tipo: 'Noticia', 
             titulo:"Resultados do teste nacional mostram que IBGE está preparado para o início do Censo em agosto",
             introducao: 'Cerca de 250 recenseadores visitaram as localidades entre novembro e fevereiro - Foto: Acervo IBGE O IBGE divulga hoje (17) os resultados do Teste Nacional do Censo Demográfico, realizado de novembro de 2021 a fevereiro de 2022, em 27 localidades dos 26...',  
-            }, 
+            }
+        ], 
+        [
             {id: 10, tipo: 'Release', 
             titulo: 'PNAD Contínua: taxa de desocupação é de 11,2% e  t…ação é de 23,9% no trimestre encerrado em janeiro', 
             introducao: 'A taxa de desocupação (11,2%) do trimestre móvel d…em relação ao mesmo período do ano anterior. A...'
@@ -82,7 +85,8 @@ import React, { useEffect } from 'react'
             titulo: 'Produção industrial recua -2,4% em janeiro', 
             introducao: 'Em janeiro de 2022, a produção industrial nacional mostrou redução de 2,4% frente ao mês de dezembro de 2021 (série com ajuste sazonal), eliminando, dessa forma, parte da expansão de 2,9% registrada no mês anterior. Já em relação a janeiro de 2021, houve...'
             }
-            ,
+        ],
+        [
             {id: 20, tipo: 'futebol', 
             titulo: 'Botafogo inicia mudanças no futebol profissional e corta jogadores, Flavio Tenius e Lucio Flavio', 
             introducao: 'Atletas pouco aproveitados e com idade abaixo do sub-23 abrirão espaço no elenco principal, que terá limite de 30 nomes. Antiga comissão técnica dará lugar à equipe de Luís Castro'
@@ -136,7 +140,7 @@ import React, { useEffect } from 'react'
             titulo: 'Palmeiras supera 60 mil sócios-torcedores e recupera marca de antes da pandemia', 
             introducao: 'Verdão não registrava número desde setembro de 2019; crescimento na atual gestão é de 44%'
             }
-
+        ]
     ]
 
             export default items_reservas

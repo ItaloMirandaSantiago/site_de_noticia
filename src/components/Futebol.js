@@ -13,7 +13,7 @@ export default function Futebol(props) {
           if (res.length) {
             set_Fut(res)
           } else {
-            set_Fut(Requisito_reserva)
+            set_Fut(Requisito_reserva[2])
           } })
       }, [])
     
@@ -36,10 +36,7 @@ export default function Futebol(props) {
           </div>
         </div>
       ))}
-      
-      
+     
       </>
     )
 }
-
-// http://api.football-data.org/v1/soccerseasons
