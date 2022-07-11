@@ -16,6 +16,10 @@ export default function Futebol(props) {
             set_Fut(Requisito_reserva[2])
           } })
       }, [])
+
+      useEffect(()=>{
+        console.log(Fut)
+      }, [Fut])
     
     return (
       <>

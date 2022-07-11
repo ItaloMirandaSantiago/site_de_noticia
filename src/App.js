@@ -4,10 +4,11 @@ import Estrutura from './components/Estrutura';
 
 function App() {
   const [items, setItems] = useState([])
-  // var elemento = []
+
 
 function resetar(){
   setItems([])
+  console.log('rodando')
   // elemento = []
   // resetar toda vez que aperta no button nos favoritos
 }

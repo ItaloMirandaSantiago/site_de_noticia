@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import img_estrela_acesa from '../imgs/estrela.png'
 
 export default function Favoritos(props){
@@ -16,7 +16,9 @@ export default function Favoritos(props){
         }
     }
 
-    verificar()
+    useEffect(()=>{
+        verificar()
+    }, [])
 
 return (
 

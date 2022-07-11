@@ -15,6 +15,10 @@ export default function Estado(props) {
         })  
       }, [])
 
+      useEffect(()=>{
+        console.log("rodando")
+      }, [noticias])
+
     return(
       noticias.map((element, index) => (
         <div key={index}>
