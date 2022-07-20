@@ -16,7 +16,7 @@ export default function Favoritos(props){
             setVerificar(false)
         }
                 // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    }, [props.items])
 
 return (
 
@@ -29,10 +29,10 @@ return (
                         return(
                             <div key={index}>    
                                 <div className='card mb-4 shadow-sm'>
-                                    <div className='card-body tamanho-do-card'>
+                                    <div className='fav card-body tamanho-do-card'>
                                         <button><img src={img_estrela_acesa} width='30px' height='30px' className="img_container" alt="salvar"/></button>
                                         {/* props.salvar_favoritos */}
-                                        <h2 className='card-text border-bottom border-dark titulo_materia'>{item.titulo}</h2>
+                                        <h2 className='card-text border-bottom border-dark text-danger'>{item.titulo}</h2>
                                         <p className='card-text texto'>{item.introducao}</p>
                                     </div>
                                 </div>
@@ -51,8 +51,8 @@ return (
                                     <div className='card-body tamanho-do-card'>
                                         <button><img src={img_estrela_acesa} width='30px' height='30px' className="img_container" alt="salvar"/></button>
                                         {/* props.salvar_favoritos */}
-                                        <h2 className='card-text border-bottom border-dark titulo_materia'>{item.titulo}</h2>
-                                        <p className='card-text texto'>{item.introducao}</p>
+                                        <h2 className='card-text border-bottom border-dark titulo_materia'>{item.title}</h2>
+                                        <p className='card-text texto'>{item.description}</p>
                                     </div>
                                 </div>
                             </div>

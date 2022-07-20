@@ -18,7 +18,6 @@ export default function Estado(props) {
     return(
       noticias.map((element, index) => (
         <div key={index}>
-          <a href={element.url} className="decoration">
             <div className='card mb-4 shadow-sm'>
                 <div className='card-body tamanho-do-card'>
                   <button onClick={()=>{props.salvar_favoritos(element)}}>  <img src={img_estrela_acesa} width='30px' height='30px' 
@@ -27,12 +26,13 @@ export default function Estado(props) {
                   <h2 className='card-text border-bottom border-dark titulo_materia'>
                     {element.title}
                   </h2>
+                <a href={element.url} className="decoration">
                   <p className='card-text texto'>
                     {element.description}
                   </p>
+                </a>
                 </div>
             </div>
-          </a>
         </div>
       ))
   )
