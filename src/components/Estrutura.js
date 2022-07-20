@@ -72,7 +72,7 @@ export default function Estrutura(props) {
       </div>
 
       <div id="favoritos" className="tab-pane positionFiv">
-          <div className='border-bottom border-dark mt-2 mb-4'>
+          <div className='border-bottom border-dark mt-2 mb-4 pb-4'>
             <h2 className="d-inline">favoritos</h2>
           </div>
           <button className="btn btn-danger positionButton" onClick={()=>{props.resetar()}}>Apagar tudo</button>

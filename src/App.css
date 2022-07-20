@@ -89,7 +89,7 @@ button{
 
 .positionButton{
   position: absolute;
-  top: 34px;
+  top: 0;
   right: 0;
 }
 
