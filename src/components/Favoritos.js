@@ -1,30 +1,28 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import img_estrela_acesa from '../imgs/estrela.png'
 
 export default function Favoritos(props){
 
     let item_aviso = [{introducao:'Para salvar alguma notícia, é necessário que aperte na estrela ao lado do titulo idêntica a desta mensagem', 
     titulo:'Nada salvo atualmente'}]
-    let verdadeiro = false
-
-    function verificar() {
-        if (props.items.length === 0) {           
-            verdadeiro = true
-        }else{
-            
-            verdadeiro = false
-        }
-    }
+    const [verificar, setVerificar] = useState(false)
 
     useEffect(()=>{
-        verificar()
+        if (props.items.length === 0) {
+  
+            setVerificar(true)
+        }else{
+
+            setVerificar(false)
+        }
+                // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
 return (
 
     <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-1">
         {   
-                verdadeiro ?
+                verificar ?
                
                     item_aviso.map((item, index)=>{
 
