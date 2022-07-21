@@ -43,6 +43,12 @@ export default function Estado_Reelese(props){
                             </div>
                             ))
         )}
+
+        {!reelese && (
+            <div className="imgCenter">
+              <img width="100%" src="https://acegif.com/wp-content/uploads/loading-11.gif" alt="carregando..."/>
+            </div>
+        )}
     </>
     )   
 }

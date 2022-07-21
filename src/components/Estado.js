@@ -11,29 +11,41 @@ export default function Estado(props) {
         .then(res => {
           if (res.news.length) {
             set_noticias(res.news)
-          }else(set_noticias(Requisito_reserva[0]))
+          }else(
+            set_noticias(Requisito_reserva[0]
+            ))
         })  
       }, [])
 
     return(
-      noticias.map((element, index) => (
-        <div key={index}>
-            <div className='card mb-4 shadow-sm'>
-                <div className='card-body tamanho-do-card'>
-                  <button onClick={()=>{props.salvar_favoritos(element)}}>  <img src={img_estrela_acesa} width='30px' height='30px' 
-                  className="img_container" alt="salvar" /></button>
-                  {/* props.salvar_favoritos */}
-                  <h2 className='card-text border-bottom border-dark titulo_materia'>
-                    {element.title}
-                  </h2>
-                <a href={element.url} className="decoration">
-                  <p className='card-text texto'>
-                    {element.description}
-                  </p>
-                </a>
-                </div>
-            </div>
+      <>
+      {noticias.length && (
+        noticias.map((element, index) => (
+          <div key={index}>
+              <div className='card mb-4 shadow-sm'>
+                  <div className='card-body tamanho-do-card'>
+                    <button onClick={()=>{props.salvar_favoritos(element)}}>  <img src={img_estrela_acesa} width='30px' height='30px' 
+                    className="img_container" alt="salvar" /></button>
+                    {/* props.salvar_favoritos */}
+                    <h2 className='card-text border-bottom border-dark titulo_materia'>
+                      {element.title}
+                    </h2>
+                  <a href={element.url} className="decoration">
+                    <p className='card-text texto'>
+                      {element.description}
+                    </p>
+                  </a>
+                  </div>
+              </div>
+          </div>
+        ))
+      )}
+
+      {!noticias.length && (
+        <div className="imgCenter">
+            <img width="100%" src="https://acegif.com/wp-content/uploads/loading-11.gif" alt="carregando..."/>
         </div>
-      ))
+      )}  
+    </>
   )
 }

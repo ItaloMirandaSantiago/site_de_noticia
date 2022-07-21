@@ -83,6 +83,11 @@ button{
   width: 100%;
 }
 
+.imgCenter{
+  display: block;
+  margin: 0 auto;
+}
+
 .positionFiv{
   position: relative;
 }

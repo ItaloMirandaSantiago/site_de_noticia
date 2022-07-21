@@ -1,7 +1,7 @@
 import React from "react"
 import Estado from "./Estado"
-import Estado_Reelese from "./Estado_Reelese"
-import Imagem_menu from './Imagem_menu'
+import EstadoReelese from "./Estado_Reelese"
+import Imagemmenu from './Imagem_menu'
 import Favoritos from "./Favoritos"
 import Futebol from './Futebol'
 
@@ -11,13 +11,13 @@ export default function Estrutura(props) {
     <div className="App">
 
     <menu className='d-flex justify-content-evenly align-items-center'>
-      <Imagem_menu />
+      <Imagemmenu />
 
     {/* imagem do menu */}
         <nav className='d-flex justify-content-between'>
-          <a className='me-3 link-dark efeito family'>Inicio</a>
-          <a className='me-3 link-dark efeito family'>Sobre</a>
-          <a className='me-3 link-dark efeito family'>Contato</a>
+          <a href="/" className='me-3 link-dark efeito family'>Inicio</a>
+          <a href="/" className='me-3 link-dark efeito family'>Sobre</a>
+          <a href="/" className='me-3 link-dark efeito family'>Contato</a>
         </nav>
         {/* abas */}
     </menu>
@@ -43,7 +43,7 @@ export default function Estrutura(props) {
     <div className='tab-content'>
       <div id='noticia' className='tab-pane'>
             {/* comeca aqui */}
-            <div className=' border-bottom border-dark'>
+            <div className='border-dark'>
               <h2>Notícias</h2>
               <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-1'>
                 {/* onde as noticias aparecem */}
@@ -57,7 +57,7 @@ export default function Estrutura(props) {
           </div>
           <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-1'>
                   {/* onde as Reelese aparecem */}
-                    <Estado_Reelese salvar_favoritos={props.salvar_favoritos}/>
+                    <EstadoReelese salvar_favoritos={props.salvar_favoritos}/>
           </div>
       </div>
       <div id="Futebol" className="tab-pane">
