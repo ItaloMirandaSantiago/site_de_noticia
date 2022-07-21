@@ -1,9 +1,9 @@
 import React from "react"
-import Estado from "./Estado"
-import EstadoReelese from "./Estado_Reelese"
-import Imagemmenu from './Imagem_menu'
+import Estado from "./Noticia"
+import Reelese from "./Reelese"
 import Favoritos from "./Favoritos"
 import Futebol from './Futebol'
+import img from "../imgs/noticia.png"
 
 export default function Estrutura(props) {
 
@@ -11,7 +11,7 @@ export default function Estrutura(props) {
     <div className="App">
 
     <menu className='d-flex justify-content-evenly align-items-center'>
-      <Imagemmenu />
+      <img src={img} alt="imagem decorativa - slogan" width='50px' height='50px' />
 
     {/* imagem do menu */}
         <nav className='d-flex justify-content-between'>
@@ -47,7 +47,7 @@ export default function Estrutura(props) {
               <h2>Notícias</h2>
               <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-1'>
                 {/* onde as noticias aparecem */}
-                  <Estado salvar_favoritos={props.salvar_favoritos}/>
+                  <Estado SalvarNoticias={props.SalvarNoticias}/>
               </div>
             </div>
       </div>
@@ -57,7 +57,7 @@ export default function Estrutura(props) {
           </div>
           <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-1'>
                   {/* onde as Reelese aparecem */}
-                    <EstadoReelese salvar_favoritos={props.salvar_favoritos}/>
+                    <Reelese SalvarNoticias={props.SalvarNoticias}/>
           </div>
       </div>
       <div id="Futebol" className="tab-pane">
@@ -66,7 +66,7 @@ export default function Estrutura(props) {
           </div>
           <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-1'>
                   {/* onde Futebol aparecem */}
-                  <Futebol salvar_favoritos={props.salvar_favoritos}/>
+                  <Futebol SalvarNoticias={props.SalvarNoticias}/>
                     
           </div>
       </div>
@@ -75,7 +75,7 @@ export default function Estrutura(props) {
           <div className='border-bottom border-dark mt-2 mb-4 pb-4'>
             <h2 className="d-inline">favoritos</h2>
           </div>
-          <button className="btn btn-danger positionButton" onClick={()=>{props.resetar()}}>Apagar tudo</button>
+          <button className="btn btn-danger positionButton" onClick={()=>{props.excluirTodasNoticiasSalvas()}}>Apagar tudo</button>
           <div> 
             {/* onde os favoritos aparecem */}
             <Favoritos items={props.items}/>

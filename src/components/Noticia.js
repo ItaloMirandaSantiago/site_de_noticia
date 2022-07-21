@@ -24,7 +24,7 @@ export default function Estado(props) {
           <div key={index}>
               <div className='card mb-4 shadow-sm'>
                   <div className='card-body tamanho-do-card'>
-                    <button onClick={()=>{props.salvar_favoritos(element)}}>  <img src={img_estrela_acesa} width='30px' height='30px' 
+                    <button onClick={()=>{props.SalvarNoticias(element)}}>  <img src={img_estrela_acesa} width='30px' height='30px' 
                     className="img_container" alt="salvar" /></button>
                     {/* props.salvar_favoritos */}
                     <h2 className='card-text border-bottom border-dark titulo_materia'>

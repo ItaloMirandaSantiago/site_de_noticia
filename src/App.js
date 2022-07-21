@@ -6,14 +6,14 @@ function App() {
   const [items, setItems] = useState([])
 
 
-function resetar(){
+function excluirTodasNoticiasSalvas(){
   setItems([])
   console.log('rodando')
   // elemento = []
   // resetar toda vez que aperta no button nos favoritos
 }
 
-function salvar_favoritos(event) {
+function SalvarNoticias(event) {
   let add_item = true
   console.log(items, 'event', event)
 // adiconar elemento para fazer a verificação
@@ -44,9 +44,9 @@ useEffect(()=>{
 
   return (
       <div>
-        <Estrutura salvar_favoritos={salvar_favoritos} 
+        <Estrutura SalvarNoticias={SalvarNoticias} 
         items={items} 
-        resetar={resetar}/>
+        excluirTodasNoticiasSalvas={excluirTodasNoticiasSalvas}/>
         {/* todos os componentes da api são tratados em Estados e enviados 
         diretamente para a estrutura, onde são mostrados na tela*/}
       </div>
